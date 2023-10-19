@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -70,6 +74,11 @@ button:focus-visible {
 }
 
 .gift {
+  text-align: center;
+}
+
+.gift img {
+  max-width: 27rem;
 }
 
 .text-center {

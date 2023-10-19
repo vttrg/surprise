@@ -13,18 +13,11 @@ type Gift = {
 const gifts = [
   {
     id: 'd349115f-e252-4a49-8b77-5837d7d56806',
-    name: '1 mês de netflix',
+    name: 'presentinhu',
     code: 'netflix',
     image:
-      'https://store-images.s-microsoft.com/image/apps.56161.9007199266246365.1d5a6a53-3c49-4f80-95d7-78d76b0e05d0.a3e87fea-e03e-4c0a-8f26-9ecef205fa7b',
-  },
-  {
-    id: '4ceeae25-52b2-4c92-9799-cde91fe2b88b',
-    name: '2 mês de netflix',
-    code: 'netflix2',
-    image:
-      'https://store-images.s-microsoft.com/image/apps.56161.9007199266246365.1d5a6a53-3c49-4f80-95d7-78d76b0e05d0.a3e87fea-e03e-4c0a-8f26-9ecef205fa7b',
-  },
+      'https://imgur.com/huCOBOe.png',
+  }
 ];
 
 function App() {
@@ -41,7 +34,7 @@ function App() {
       setGift(gift);
       setError('');
     } else {
-      setError('Errou feio');
+      setError('ERROOOOOOOOOU 🤣🤣🤣🤣');
     }
   };
 
@@ -49,7 +42,7 @@ function App() {
     <>
       {gift ? (
         <div className="gift">
-          <img src={gift.name} className="" />
+          <img src={gift.image} className="" />
           <p>{gift.name}</p>
         </div>
       ) : (
@@ -57,7 +50,7 @@ function App() {
           {error ? (
             <p className="text-center">{error}</p>
           ) : (
-            <p className="text-center">Digita algo ai, caralho</p>
+            <p className="text-center">Será se você descobre a senha? 🤔🤐</p>
           )}
           <div className="flex">
             <input
@@ -68,7 +61,7 @@ function App() {
                 'border-error': !!error,
               })}
             />
-            <button onClick={onCodeValidation}>Validar Código</button>
+            <button onClick={onCodeValidation}>Validar Senha</button>
           </div>
         </div>
       )}
