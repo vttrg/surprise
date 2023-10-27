@@ -5,7 +5,9 @@ import clsx from 'clsx';
 
 type Gift = {
   id: string;
-  name: string;
+  text: string;
+  text2: string;
+  text3: string;
   code: string;
   image: string;
 };
@@ -15,7 +17,7 @@ const gifts = [
     id: 'd349115f-e252-4a49-8b77-5837d7d56806',
     text: 'Você sempre me pediu uma lima  limão e até então eu nunca pude te dar.',
     text2: 'É bem parecido e eu acredito que você vá gostar. Consegue adivinhar o que é?',
-    text3: 'Novamente, parabéns pelo seu dia, meu amor! Eu te amo. 💜',
+    text3: 'Novamente, parabéns pelo seu dia. Eu te amo muito! 💜',
     code: 'ziguinho',
     image:
       'https://imgur.com/huCOBOe.png',
