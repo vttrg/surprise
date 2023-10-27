@@ -10,9 +10,10 @@ type Gift = {
   text3: string;
   code: string;
   image: string;
+  music: string;
 };
 
-const gifts = [
+const gifts: Gift[] = [
   {
     id: 'd349115f-e252-4a49-8b77-5837d7d56806',
     text: 'Você sempre me pediu uma lima  limão e até então eu nunca pude te dar.',
@@ -21,6 +22,7 @@ const gifts = [
     code: 'ziguinho',
     image:
       'https://imgur.com/huCOBOe.png',
+    music: 'assets/audio.mp3',
   }
 ];
 
@@ -50,6 +52,7 @@ function App() {
           <p>{gift.text}</p>
           <p>{gift.text2}</p>
           <p>{gift.text3}</p>
+          <audio autoPlay src={gift.music} />
         </div>
       ) : (
         <div>
