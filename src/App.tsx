@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './App.css';
+import music from './assets/audio.mp3';
 
 import clsx from 'clsx';
 
@@ -10,7 +11,6 @@ type Gift = {
   text3: string;
   code: string;
   image: string;
-  music: string;
 };
 
 const gifts: Gift[] = [
@@ -22,7 +22,6 @@ const gifts: Gift[] = [
     code: 'ziguinho',
     image:
       'https://imgur.com/huCOBOe.png',
-    music: 'assets/audio.mp3',
   }
 ];
 
@@ -30,6 +29,7 @@ function App() {
   const [error, setError] = useState('');
   const [value, setValue] = useState('');
   const [gift, setGift] = useState<Gift | null>(null);
+  const audio = useRef<HTMLAudioElement>(null);
 
   const onCodeValidation = () => {
     const gift = gifts.find((gift) => {
@@ -46,13 +46,13 @@ function App() {
 
   return (
     <>
+    <audio ref={audio} src={music} />
       {gift ? (
         <div className="gift">
           <img src={gift.image} className="" />
           <p>{gift.text}</p>
           <p>{gift.text2}</p>
           <p>{gift.text3}</p>
-          <audio autoPlay src={gift.music} />
         </div>
       ) : (
         <div>
@@ -66,6 +66,7 @@ function App() {
               type="text"
               value={value}
               onChange={(e) => setValue(e.target.value)}
+              onFocus={() => audio.current?.play()}
               className={clsx({
                 'border-error': !!error,
               })}
