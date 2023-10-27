@@ -20,8 +20,7 @@ const gifts: Gift[] = [
     text2: 'É bem parecido e eu acredito que você vá gostar. Consegue adivinhar o que é?',
     text3: 'Novamente, parabéns pelo seu dia. Eu te amo muito! 💜',
     code: 'ziguinho',
-    image:
-      'https://imgur.com/huCOBOe.png',
+    image: '/gifts/ziguinho.png',
   }
 ];
 
@@ -49,7 +48,7 @@ function App() {
     <audio ref={audio} src={music} />
       {gift ? (
         <div className="gift">
-          <img src={gift.image} className="" />
+          <img src={gift.image} className="gift_image" />
           <p>{gift.text}</p>
           <p>{gift.text2}</p>
           <p>{gift.text3}</p>
