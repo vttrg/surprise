@@ -13,8 +13,10 @@ type Gift = {
 const gifts = [
   {
     id: 'd349115f-e252-4a49-8b77-5837d7d56806',
-    name: 'presentinhu',
-    code: 'netflix',
+    text: 'Você sempre me pediu uma lima  limão e até então eu nunca pude te dar.',
+    text2: 'É bem parecido e eu acredito que você vá gostar. Consegue adivinhar o que é?',
+    text3: 'Novamente, parabéns pelo seu dia, meu amor! Eu te amo. 💜',
+    code: 'ziguinho',
     image:
       'https://imgur.com/huCOBOe.png',
   }
@@ -43,7 +45,9 @@ function App() {
       {gift ? (
         <div className="gift">
           <img src={gift.image} className="" />
-          <p>{gift.name}</p>
+          <p>{gift.text}</p>
+          <p>{gift.text2}</p>
+          <p>{gift.text3}</p>
         </div>
       ) : (
         <div>
